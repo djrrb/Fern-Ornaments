@@ -115,7 +115,7 @@ Z*X*C
 ![Border](assets/border.png)
 
 
-You can use `S` or the wordspace to add empty space to the inside or outside of patterns. From there you can make the patterns as complicated as you want!
+You can use `S` or the wordspace to add empty space to the inside or outside of patterns. From there you can mix and match the shapes to make the patterns as complicated as you want!
 
 ```
 Q*W*E
