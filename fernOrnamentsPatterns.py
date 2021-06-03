@@ -41,12 +41,6 @@ fontPath = 'Fern Ornaments'
 
 patterns = [
 """
-Q*w*E
-*
-a*RT*d
-a*UY*d
-*
-Z*x*C
 """
 ]
 
@@ -73,6 +67,9 @@ margin = baseWidth * .05
 
 # do we want to convert the text to outlines
 createOutlines = False
+
+inDrawBot = 'BezierPath' in dir()
+    
 
 ###################################
 ######## HELPER FUNCTIONS #########
@@ -199,7 +196,8 @@ for pattern in patterns:
         patternString += processLine(line) + '\n'
         
     # draw the output
-    drawPattern(patternString, createOutlines=createOutlines)
+    if inDrawBot:
+        drawPattern(patternString, createOutlines=createOutlines)
     # print the results for easy copy/paste
     print(patternString+'\n')
 
