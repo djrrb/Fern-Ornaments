@@ -28,33 +28,28 @@ import math
 ###################################
 patterns = [
 """
-q*w
-av*x
-adS*O
-*
-adi*yh
-adi*uj
-adi*yh
-adi*ju
 """
 ]
-fontPath = 'Fern Ornaments'
-# define a constant width
-baseWidth = 1000
 # the number of cells for the main pattern
 # in drawbot, cmd + ← ↑ → ↓ to change values
-cellsX, cellsY = 14, 23
-# make the entire pattern symmetrical?
-totalXSymmetry, totalYSymmetry = True, True
+cellsX, cellsY = 16, 16
+# try to make the entire pattern symmetrical?
+# this likes even cell numbers
+totalXSymmetry, totalYSymmetry = False, False
 # add symmetry to the main section
-localXSymmetry, localYSymmetry = True, True
+localXSymmetry, localYSymmetry = False, False
+
+# the font path (or font name, if installed)
+fontPath = 'Fern Ornaments'
+# define a width
+# height will be calculated automatically
+baseWidth = 1000
 # define colors (r,g,b or r,g,b,a)
-backgroundColor = 0, .5, 0
+backgroundColor = 0, .3, .2
 foregroundColor = 1, 1, 1
 # add a margin to the document
 margin = baseWidth * .05
-
-# test to see if we are in drawbot and should draw the results
+# test to see if we are in drawbot
 # otherwise just return plaintext
 inDrawBot = 'BezierPath' in dir()
 # convert the text to outlines?
