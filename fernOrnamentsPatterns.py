@@ -28,12 +28,14 @@ import math
 ###################################
 patterns = [
 """
-
+Q*W
+*
+A*JRU
 """
 ]
 # the number of cells for the main pattern
 # in drawbot, cmd + ← ↑ → ↓ to change values
-cellsX, cellsY = 16, 16
+cellsX, cellsY = 16, 6
 # try to make the entire pattern symmetrical?
 # this likes even cell numbers
 totalXSymmetry, totalYSymmetry = False, False
@@ -46,8 +48,8 @@ fontPath = 'Fern Ornaments'
 # height will be calculated automatically
 baseWidth = 1000
 # define colors (r,g,b or r,g,b,a)
-foregroundColor = 0, 0, 0
-backgroundColor = 1, 1, 1
+foregroundColor = 0,0,0
+backgroundColor = 1,1,1
 # add a margin to the document
 margin = baseWidth * .05
 # test to see if we are in drawbot
@@ -310,4 +312,4 @@ if __name__ == "__main__":
         print(patternString+'\n')
 
     # if we want to save the output, do it here
-    #saveImage('ornaments.gif')
+    saveImage('ornaments.gif')

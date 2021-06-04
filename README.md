@@ -130,3 +130,40 @@ AB*L*VD
 Z*X*C
 ```
 ![Complex](assets/complex.png)
+
+## Symmetry
+
+In a QWERTY keyboard layout, vertical and horizontal symmetry in shapes is mapped to adjacent keys. Still it can be cumbersome to figure symmetrical keystrokes out for complex patterns, so the script contains two symmetry toggles to help automate patterns more quickly and intuitively. 
+
+### Total symmetry
+
+Total symmetry (`totalXSymmetry` and `totalYSymmetry` atttempts to reflect the pattern in the x and/or y direction. This allows you to write out the upper-left quarter of a pattern, and then reflect horizontally and vertically to create the whole thing. It will override any suffixes with a reflection of the prefix. 
+
+For example, we can use prefixes and suffixes to create the upper-left quarter of a pattern with a border:
+
+```
+Q*W
+*
+A*JRU
+```
+
+![Total Symmetry Before](assets/total-symmetry-before.png)
+
+If `totalXSymmetry` and `totalYSymmetry` are set to `True`, the same pattern renders like this:
+
+![Total Symmetry After](assets/total-symmetry-after.png)
+
+Note that patterns may not be symmetrical if the length of the pattern is not equally divisble by the number of cells! Some patterns work better with even-numbered cell counts; others with odd. 
+
+
+### Local symmetry
+
+With local symmetry, the pattern is reflected _before_ it is repeated, doubling the length of the repeating pattern but not affecting the symmetry of the pattern as a whole. Prefixes and suffixes are not affected.
+
+If `localXSymmetry` and `localYSymmetry` are applied the previous example, the 3×1 repeating section becomes a 6×2 repeating section.
+
+![Local Symmetry After](assets/local-symmetry-after.png)
+
+Of course, it’s also possible to apply local symmetry and total symmetry simultaneously:
+
+![Total and Local Symmetry](assets/total-and-local-symmetry.png)
