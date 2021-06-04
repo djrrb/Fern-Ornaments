@@ -28,11 +28,7 @@ import math
 ###################################
 patterns = [
 """
-q*w
-qc*x
-*
-ad*Y
-ad*U
+
 """
 ]
 # the number of cells for the main pattern
@@ -40,9 +36,9 @@ ad*U
 cellsX, cellsY = 16, 16
 # try to make the entire pattern symmetrical?
 # this likes even cell numbers
-totalXSymmetry, totalYSymmetry = True, True
+totalXSymmetry, totalYSymmetry = False, False
 # add symmetry to the main section
-localXSymmetry, localYSymmetry = True, False
+localXSymmetry, localYSymmetry = False, False
 
 # the font path (or font name, if installed)
 fontPath = 'Fern Ornaments'
