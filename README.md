@@ -14,7 +14,7 @@ These ornaments were based on a system mentioned by Bruce Rogers, designer of th
 
 In the Fern Ornaments font, different shapes are mapped to letters, meant to be easily typed on a QWERTY keyboard. This allows you to easily find reflecting forms by typing adjacent keys.
 
-When avaiable, lowercase letters will display undotted variants of the same form.
+When available, lowercase letters will display undotted variants of the same form.
 
 ### Leaves
 
