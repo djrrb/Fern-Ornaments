@@ -28,6 +28,11 @@ import math
 ###################################
 patterns = [
 """
+q*w
+qc*x
+*
+ad*Y
+ad*U
 """
 ]
 # the number of cells for the main pattern
@@ -35,9 +40,9 @@ patterns = [
 cellsX, cellsY = 16, 16
 # try to make the entire pattern symmetrical?
 # this likes even cell numbers
-totalXSymmetry, totalYSymmetry = False, False
+totalXSymmetry, totalYSymmetry = True, True
 # add symmetry to the main section
-localXSymmetry, localYSymmetry = False, False
+localXSymmetry, localYSymmetry = True, False
 
 # the font path (or font name, if installed)
 fontPath = 'Fern Ornaments'
@@ -45,8 +50,8 @@ fontPath = 'Fern Ornaments'
 # height will be calculated automatically
 baseWidth = 1000
 # define colors (r,g,b or r,g,b,a)
-backgroundColor = 0, .3, .2
-foregroundColor = 1, 1, 1
+foregroundColor = 0, 0, 0
+backgroundColor = 1, 1, 1
 # add a margin to the document
 margin = baseWidth * .05
 # test to see if we are in drawbot
