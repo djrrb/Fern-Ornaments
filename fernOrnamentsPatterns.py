@@ -28,14 +28,11 @@ import math
 ###################################
 patterns = [
 """
-Q*W
-*
-A*JRU
 """
 ]
 # the number of cells for the main pattern
 # in drawbot, cmd + ← ↑ → ↓ to change values
-cellsX, cellsY = 16, 6
+cellsX, cellsY = 16, 16
 # try to make the entire pattern symmetrical?
 # this likes even cell numbers
 totalXSymmetry, totalYSymmetry = False, False
