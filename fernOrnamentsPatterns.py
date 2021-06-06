@@ -192,6 +192,7 @@ def processLine(lineSegments):
         # the content and flipped content, removing a character
         # at a time until we get the length we want
         flip = 0
+        attempts = 25
         while len(mainContent) + len(mainContentReversed) > mainColCount:
             if flip == 1:
                 mainContent = mainContent[:-1]
@@ -199,6 +200,9 @@ def processLine(lineSegments):
             else:
                 mainContentReversed = mainContentReversed[:-1]
                 flip = 1
+            attempts -= 1
+            if not attempts:
+                break
         # add the base half and flipped half together
         main = mainContent + getSymmetry(mainContentReversed[::-1], xSymmetryMap)
     else:
@@ -245,6 +249,7 @@ def getPatternString(patternSections):
     if totalYSymmetry:
         linesReversed = lines[:]
         flip = 1
+        attempts = 25
         while len(lines) + len(linesReversed) > mainRowCount:
             if flip == 1:
                 lines = lines[:-1]
@@ -252,6 +257,10 @@ def getPatternString(patternSections):
             else:
                 linesReversed = linesReversed[:-1]
                 flip = 1
+            attempts -= 1
+            if not attempts:
+                break
+                
         linesReversed.reverse()
     else:
         lines = lines[:mainRowCount]
@@ -309,4 +318,4 @@ if __name__ == "__main__":
         print(patternString+'\n')
 
     # if we want to save the output, do it here
-    saveImage('ornaments.gif')
+    #saveImage('ornaments.gif')
