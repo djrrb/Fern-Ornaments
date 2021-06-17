@@ -10,6 +10,8 @@
 
 * https://salisburyhouseandgardens.com/tag/oxford-lectern-bible/
 
+* https://archive.org/details/1923AmericanTypeFoundersSpecimenBookCatalogue/page/n641/mode/2up
+
 * https://www.goodreads.com/book/show/2753924-paragraphs-on-printing
 
 * https://starwarsthoughts.files.wordpress.com/2020/05/screen-shot-2020-05-22-at-8.55.43-pm.png?
