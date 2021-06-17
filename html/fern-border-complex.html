@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <style type="text/css">
+
+  body {
+    font-family: 'Fern Text';
+  }
+
+  span {
+    font-variant: all-small-caps;
+    letter-spacing: .5rem;
+  }
+
+  .box {
+  border: 80px solid;
+  border-image-source: url(assets/border-complex.svg);
+  border-image-slice: calc(34 / 100 * 100%) calc(34 / 100 * 100%) fill;
+  border-image-repeat: round;
+  resize: both;
+  }
+
+  * {
+  box-sizing: border-box;
+  }
+
+  body {
+  background-color: #cd8482;
+  height: 100vh;
+  margin: 0;
+  }
+
+  #outer {
+  width: 80vw;
+  height: 80vh;
+  margin: 4em auto;
+  background-image: url(assets/interior-color.svg);
+  background-size: 80px;
+  background-clip: padding-box;
+  background-repeat: round;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  }
+
+  #inner {
+  width: 30vw;
+  height: 30vh;
+  margin: auto;
+  background: #eee;
+  padding: 1em;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  border: 20px solid #eee;
+  box-shadow: inset 0px 0px 0px 1px #ccc;
+  box-sizing: border-box;
+
+  }
+
+  @media screen and (max-width: 45em) {
+    .box {
+  border: 60px solid;
+  border-image-source: url(assets/border-complex.svg);
+  border-image-slice: calc(34 / 100 * 100%) calc(34 / 100 * 100%) fill;
+  border-image-repeat: round;
+    }
+    
+    #outer {
+      background-size: 60px;
+  background-clip: padding-box;
+  background-repeat: round;
+    }
+  }
+
+
+  </style>
+  <title>Responsive border demo</title>
+</head>
+<body>
+  <div class="box" id="outer">
+    <div id="inner">
+      <span>Oh hell yes</span>
+    </div>
+  </div>
+</body>
+</html>
