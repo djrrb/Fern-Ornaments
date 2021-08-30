@@ -137,7 +137,7 @@ In a QWERTY keyboard layout, vertical and horizontal symmetry in shapes is mappe
 
 ### Total symmetry
 
-Total symmetry (`totalXSymmetry` and `totalYSymmetry` atttempts to reflect the pattern in the x and/or y direction. This allows you to write out the upper-left quarter of a pattern, and then reflect horizontally and vertically to create the whole thing. It will override any suffixes with a reflection of the prefix. 
+Total symmetry atttempts to reflect the entire pattern in the x and/or y direction. This allows you to write out the upper-left quarter of a pattern, and then reflect horizontally and vertically to create the whole thing. It will override any suffixes with a reflection of the prefix. 
 
 For example, we can use prefixes and suffixes to create the upper-left quarter of a pattern with a border:
 
@@ -153,7 +153,7 @@ If `totalXSymmetry` and `totalYSymmetry` are set to `True`, the same pattern ren
 
 ![Total Symmetry After](assets/total-symmetry-after.png)
 
-Note that patterns may not be symmetrical if the length of the pattern is not equally divisble by the number of cells! Some patterns work better with even-numbered cell counts; others with odd. 
+Note that patterns may not be truly symmetrical if the length of the pattern is not equally divisble by the number of cells. Some patterns work better with even-numbered cell counts; others with odd. 
 
 
 ### Local symmetry
